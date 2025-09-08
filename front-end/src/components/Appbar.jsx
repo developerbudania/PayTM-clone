@@ -14,7 +14,7 @@ useEffect(() => {
     }
     else{
         const fetchUser = async () => {
-            const response = await axios.get("http://localhost:4000/api/v1/user/getuser", {
+            const response = await axios.get("https://pay-tm-clone-ebon.vercel.app/api/v1/user/getuser", {
                 headers: {
                     Authorization: `Bearer ${userToken}`,
                 },

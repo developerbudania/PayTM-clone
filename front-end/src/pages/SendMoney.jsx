@@ -37,7 +37,7 @@ export const SendMoney = () => {
                             }} type="number" className="flex h-10 w-full rounded-md border border-input bg-backhground px-3 py-2 text-sm" id="amount" placeholder="Enter amount" />
                         </div>
                         <button onClick={async () => {
-                            const res = await axios.post("http://localhost:4000/api/v1/account/transfer", {
+                            const res = await axios.post("https://pay-tm-clone-ebon.vercel.app/api/v1/account/transfer", {
                                 to: id,
                                 amount
                             }, {
