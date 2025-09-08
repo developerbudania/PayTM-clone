@@ -12,12 +12,10 @@ app.use("/api/v1", mainRouter);
 //app.use("/api/v1/users", userRouter);
 
  const connectDB = async () => {
-  try {
+  
     await mongoose.connect(process.env.MONGOURL);
     console.log("database is connected successfully!");
-  } catch (err) {
-    console.log(err);
-  }
+  
 };
 
 app.get("/", (req, res) => {
