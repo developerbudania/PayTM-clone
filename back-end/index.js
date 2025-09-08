@@ -10,8 +10,7 @@ dotenv.config();
   
 app.use("/api/v1", mainRouter);
 //app.use("/api/v1/users", userRouter);
-
- const connectDB = async () => {
+const connectDB = async () => {
   
     await mongoose.connect(process.env.MONGOURL);
     console.log("database is connected successfully!");
@@ -21,9 +20,9 @@ app.use("/api/v1", mainRouter);
 app.get("/", (req, res) => {
   res.json("Server is up and running");
 });
-
+connectDB();
 app.listen( 4000, () => {
-  connectDB();
+  
   console.log("Server is running on port: " +  4000);
 });
   
